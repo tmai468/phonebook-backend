@@ -1,6 +1,7 @@
-POST http://localhost:3001/api/persons
+POST https://protected-bastion-21231.herokuapp.com/api/persons
 Content-Type: application/json
 
 {
-    "name": "Kiwoong Lee"
+    "name": "Tracey Le",
+    "number": "021"
 }

@@ -26,6 +26,7 @@ let persons = [
         "number": "39-23-6423122"
       }
 ]
+app.use(express.static('build'))
 app.get('/', (request, response) => {
     response.send("<h1>Tracey Mai's Phonebook</h1>")
 })
