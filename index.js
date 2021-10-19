@@ -1,7 +1,9 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 let persons = [
     { 
         "id": 1,
@@ -49,14 +51,16 @@ const generateNewId = () => {
     return Math.floor(Math.random() * maxId)
 }
 app.post('/api/persons', (request, response) => {
+    console.log('here')
     const body = request.body
+    console.log(body)
     if (!body.name || !body.number) {
         return response.status(404).json({
             error: 'name or number is missing'
         })
     }
     const nameExist = persons.find(person=>person.name === body.name)
-    if (!nameExist) {
+    if (nameExist) {
         return response.status(404).json({
             error: 'name must be unique'
         })
