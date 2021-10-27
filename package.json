@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"ERROR: No test yet\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "lint": "eslint ."
   },
   "author": "Tracey Mai",
   "license": "MIT",
@@ -19,6 +20,7 @@
     "mongoose-unique-validator": "^3.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
     "nodemon": "^2.0.13"
   }
 }
